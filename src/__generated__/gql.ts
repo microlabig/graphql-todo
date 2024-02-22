@@ -14,6 +14,9 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  */
 const documents = {
     "\n    query AllTodos {\n        todos: allTodos {\n            id\n            title\n            completed\n        }\n    }\n": types.AllTodosDocument,
+    "\n    mutation AddTodo($title: String!, $userId: ID!, $completed: Boolean!) {\n        newTodo: createTodo(title: $title, user_id: $userId, completed: $completed) {\n            id\n            title\n            completed\n            User {\n                id\n                name\n            }\n        }\n    }\n": types.AddTodoDocument,
+    "\n    mutation UpdateTodo($id: ID!, $completed: Boolean) {\n        updateTodo(id: $id, completed: $completed) {\n            id\n            title\n            completed\n        }\n    }\n": types.UpdateTodoDocument,
+    "\n    mutation DeleteTodo($id: ID!) {\n        removeTodo(id: $id) {\n            id\n        }\n    }\n": types.DeleteTodoDocument,
 };
 
 /**
@@ -34,6 +37,18 @@ export function gql(source: string): unknown;
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(source: "\n    query AllTodos {\n        todos: allTodos {\n            id\n            title\n            completed\n        }\n    }\n"): (typeof documents)["\n    query AllTodos {\n        todos: allTodos {\n            id\n            title\n            completed\n        }\n    }\n"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "\n    mutation AddTodo($title: String!, $userId: ID!, $completed: Boolean!) {\n        newTodo: createTodo(title: $title, user_id: $userId, completed: $completed) {\n            id\n            title\n            completed\n            User {\n                id\n                name\n            }\n        }\n    }\n"): (typeof documents)["\n    mutation AddTodo($title: String!, $userId: ID!, $completed: Boolean!) {\n        newTodo: createTodo(title: $title, user_id: $userId, completed: $completed) {\n            id\n            title\n            completed\n            User {\n                id\n                name\n            }\n        }\n    }\n"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "\n    mutation UpdateTodo($id: ID!, $completed: Boolean) {\n        updateTodo(id: $id, completed: $completed) {\n            id\n            title\n            completed\n        }\n    }\n"): (typeof documents)["\n    mutation UpdateTodo($id: ID!, $completed: Boolean) {\n        updateTodo(id: $id, completed: $completed) {\n            id\n            title\n            completed\n        }\n    }\n"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "\n    mutation DeleteTodo($id: ID!) {\n        removeTodo(id: $id) {\n            id\n        }\n    }\n"): (typeof documents)["\n    mutation DeleteTodo($id: ID!) {\n        removeTodo(id: $id) {\n            id\n        }\n    }\n"];
 
 export function gql(source: string) {
   return (documents as any)[source] ?? {};

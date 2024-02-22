@@ -1,7 +1,20 @@
-# React + TypeScript + Vite
-GraphQl
-JsonGraphQlServer
-GraphQlCodegen [link1](https://www.apollographql.com/docs/react/development-testing/static-typing/), [link2](https://the-guild.dev/graphql/codegen/docs/config-reference/schema-field#root-level)
+# GraphQL Todos
+
+`yarn start:dev` - start dev
+
+`yarn compile` - generate types (needed server is on)
+
+- React
+- TypeScript
+- Vite (SWC)
+- GraphQl
+- JsonGraphQlServer
+- GraphQlCodegen [link1](https://www.apollographql.com/docs/react/development-testing/static-typing/), [link2](https://the-guild.dev/graphql/codegen/docs/config-reference/schema-field#root-level)
+- Chakra UI [link](https://chakra-ui.com/getting-started)
+
+Based on [video](https://youtu.be/vlDhgLk5m84), but added:
+- TS, 
+- GraphQl Generator
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
