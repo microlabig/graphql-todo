@@ -14,6 +14,7 @@ type TTodoItemProps = {
 export const TodoItem = memo((props: TTodoItemProps) => {
     const { todo, onToggle, onDelete, className} = props;
     const { id, title, completed } = todo || {};
+    // const { data } = useQuery(GET_TODO);
 
     return (
         <HStack spacing={3} className={className}>

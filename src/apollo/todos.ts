@@ -1,4 +1,5 @@
 import { gql } from "../__generated__/gql";
+import { graphql } from "gql.tada";
 
 export const ALL_TODO = gql(`
     query AllTodos {
@@ -38,6 +39,17 @@ export const DELETE_TODO = gql(`
     mutation DeleteTodo($id: ID!) {
         removeTodo(id: $id) {
             id
+        }
+    }
+`);
+
+// gql.tada example
+export const GET_TODO = graphql(`
+    query GetTodo($id: ID!) {
+        Todo(id: $id) {
+            id
+            title
+            completed
         }
     }
 `);

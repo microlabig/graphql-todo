@@ -1,8 +1,8 @@
 # GraphQL Todos
 
-`yarn start:dev` - start dev
+`yarn start:dev` - start dev (front + back)
 
-`yarn compile` - generate types (needed server is on)
+`yarn compile` - generate graphql types (needed server is on)
 
 - React
 - TypeScript
@@ -15,6 +15,17 @@
 Based on [video](https://youtu.be/vlDhgLk5m84), but added:
 - TS, 
 - GraphQl Generator
+
+### Bellow auto types graphql generator types is very faster and amazing!!! 🤩🤩🤩
+An auto-generator of graphql query TS-types and VSCode autocomplete plugin has also been added. Using `gql.tada` ([link1](https://gql-tada.0no.co/), [link2](https://github.com/0no-co/gql.tada?tab=readme-ov-file), [link3](https://www.youtube.com/watch?v=PzhxN1u6ziQ)). 
+
+Screenshots:
+
+<img src="./public/todo1.png" alt="Todo1" width="400"/>
+<br />
+<img src="./public/todo2.png" alt="Todo2" width="400"/>
+
+---
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
